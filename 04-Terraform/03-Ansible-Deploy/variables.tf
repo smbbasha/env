@@ -1,11 +1,11 @@
 variable "key_name" {
-  default = "mansoor"
+  default = "smb"
 }
 
 variable "pvt_key" {
-  default = "/root/.ssh/mansoor.pem"
+  default = "/root/.ssh/smb.pem"
 }
 
 variable "sg-id" {
-  default = "sg-04a603e452cff2d4a"
+  default = "sg-0501cacd50f79de7f"
 }
