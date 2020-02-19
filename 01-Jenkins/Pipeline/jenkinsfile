@@ -14,13 +14,10 @@ node {
  stage('Jfrog Artifactory download'){
     def server= Artifactory.server 'jfrog'
     def downloadSpec = """{
-    "files": [
-    {
+    "files": [{
       "pattern": "Devops301/*.war",
-      "target": "../../../04-Terraform/03-Ansible-Deploy/ansible/04-Tomcat/templates/"
-      "recursive": "false"
-    }
-    ]
+      "target": "../../../04-Terraform/03-Ansible-Deploy/ansible/04-Tomcat/templates/",
+      "recursive": "false"}]
     }"""
     server.download(downloadSpec)
   } 
