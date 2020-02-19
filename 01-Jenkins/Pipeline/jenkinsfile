@@ -18,7 +18,7 @@ node {
     {
       "pattern": "Devops301/*.war",
       "target": "../../../04-Terraform/03-Ansible-Deploy/ansible/04-Tomcat/templates/"
-     
+      "recursive": "false"
     }
     ]
     }"""
