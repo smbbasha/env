@@ -24,7 +24,7 @@ node {
 def project_ansible=""
 dir(project_ansible) {
    stage('ansible-deploy') {
-   sh 'ansible-playbook  --key=/root/.ssh/smb.pem  /root/.jenkins/workspace/PAAS_env/04-Terraform/03-Ansible-Deploy/ansible/04-Tomcat/web-playbook.yaml -u ubuntu -v'
+   sh 'ansible-playbook  --key=/root/.ssh/smb.pem web-playbook.yaml -u ubuntu -v'
   }
   }
    
