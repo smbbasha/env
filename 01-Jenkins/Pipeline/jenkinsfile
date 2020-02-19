@@ -7,7 +7,7 @@ node {
    git 'https://github.com/smbbasha/env.git'
   }
     
- def project_path="01-Jenkins/Code/petclinic"
+ def project_path="01-Jenkins/Pipeline"
  
  dir(project_path) {
     
@@ -24,7 +24,7 @@ node {
 def project_ansible=""
 dir(project_ansible) {
    stage('ansible-deploy') {
-   sh 'ansible-playbook  --key=/root/.ssh/smb.pem 01-Jenkins/Code/petclinic/web-playbook.yaml -u ubuntu -v'
+   sh 'ansible-playbook  --key=/root/.ssh/smb.pem web-playbook.yaml -u ubuntu -v'
   }
   }
    
